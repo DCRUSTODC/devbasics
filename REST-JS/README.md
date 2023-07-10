@@ -3,8 +3,7 @@
 Formally, REST API stands for Representational State Transfer - Application Programming Interface. A REST API is a server that serves data to clients using endpoints provided by the programmer. The data could be served in the form of HTML, JSON, CSV, etc. but the concept remains the same. Every data driven service is implemented on top of this, and hence, huge firms including Facebook, Netflix, Youtube, Uber and others, use RESTful APIs for delivering their services.
 
 ### How to create a REST API
-A REST API can be created using several technologies. For Javascript, we have a framework called NodeJS, in Python, we have Flask and Django, in Java there's Spring Boot and many more.
-
+A REST API can be created using several technologies:
 - Javascript: NodeJS
 - Python: Django / Flask
 - Java: Spring Boot
