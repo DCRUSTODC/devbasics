@@ -38,4 +38,4 @@ The main purpose of this repository is to evolve the culture of open source deve
 You can always ask your doubts in the community group.
 
 ### Good First Issues
-To help you get your feet wet and get you familiar with our contribution process, we have a list of [good first issues](https://github.com/DCRUSTODC/basic-development-projects) that contain bugs with a relatively limited scope. This is a great place to get started with open source <3.
+To help you get your feet wet and get you familiar with our contribution process, we have a list of [good first issues](https://github.com/DCRUSTODC/basic-development-projects/labels/good%20first%20issue) that contain bugs with a relatively limited scope. This is a great place to get started <3.
