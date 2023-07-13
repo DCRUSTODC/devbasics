@@ -236,7 +236,7 @@ To download the data-set feel free to visit this : https://www.kaggle.com/c/hous
 ## Contributing 🎳
 Contributions are always welcome!
 
-See the contributing guidelines for ways to get started.
+See the contribution guidelines for ways to get started.
 
-Please adhere to this project's code of conduct.
+Please adhere to this project's [Code of Conduct](https://github.com/DCRUSTODC/.github/blob/main/profile/code-of-conduct.md).
 
