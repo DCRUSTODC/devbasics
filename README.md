@@ -32,3 +32,4 @@ Following this would make the repository look more professional:)
 ### Contributors:
 Following people have previously contributed to this repository:
 - [Aditi Dahiya](https://github.com/Aditi-Dahiya)
+- [Ajay Thakur](https://github.com/thakurajay369)
