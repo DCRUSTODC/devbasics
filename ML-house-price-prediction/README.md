@@ -14,7 +14,7 @@ Housing prices are an important reflection of the economy, and housing price ran
 
 ## Tools 
 Option 1: Jupyter Notebook
-Installation (https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/install.html)
+- Installation (https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/install.html)
 
 Option 2: Google Colab
 
