@@ -13,8 +13,10 @@ Housing prices are an important reflection of the economy, and housing price ran
 5) Domain Knowledge
 
 ## Tools 
-Jupyter Notebook
+Option 1: Jupyter Notebook
 Installation (https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/install.html)
+
+Option 2: Google Colab
 
 ## We will handle this problem in a structured way 🏛
 We will be following the table of content given below.
