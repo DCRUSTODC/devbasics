@@ -4,6 +4,18 @@
 
 ## Project Description 📝
 Housing prices are an important reflection of the economy, and housing price ranges are of great interest to both buyers and sellers. In this project, house prices will be predicted given explanatory variables that cover many aspects of residential houses. The goal of this project is to create a regression model that will be able to accurately estimate the price of the house given the features.
+
+## Prerequisites 📝
+1) Foundation in Mathematics
+2) Programming Knowledge
+3) Data Analysis
+4) Understanding of Machine Learning
+5) Domain Knowledge
+
+## Tools 
+Jupyter Notebook
+Installation (https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/install.html)
+
 ## We will handle this problem in a structured way 🏛
 We will be following the table of content given below.
 1) Problem Statement
