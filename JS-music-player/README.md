@@ -1,6 +1,6 @@
 # 🎵 Music Player 
 
-Welcome to the Music Player project! This is a basic music player interface that allows users to play and pause songs. The player includes a progress bar to visualize the playback progress, enhancing the user experience.
+Welcome to the Music Player project! This is a basic music player interface that allows users to play and pause songs. The player includes a progress bar to visualize the playback progress, enhancing the user experience. Deployed [here](https://musicmatch.onrender.com/).
 
 ## 🎶 Current Functionalities
 
@@ -37,7 +37,7 @@ Here are some exciting features you can add to the Music Player:
 19. **🔐 User Authentication**: Implement user authentication for personalized features.
 
 ## 📚 Authors
-- DCRUSTODC (https://dcrustodc.netlify.app/)
+- DCRUSTODC
 
 ## 🤝 Contributing
 Contributions are welcome! Please follow the contribution guidelines and code of conduct.
