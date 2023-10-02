@@ -7,7 +7,7 @@ By participating in this project you agree to abide by its terms.
 
 Ensure your pull request adheres to the following guidelines
 
-1. Hacktoberfest's value #2 **Quantity is fun, quality is key**. See <https://hacktoberfest.com/participation/> for details. 
+1. Hacktoberfest's value #2 **Quantity is fun, quality is key**. See <https://hacktoberfest.com/participation/> for details.
 2. Short-term action,Long term impact - Your participation has a lasting effect on people and technology long after October. Your participation helps build the future of the internet.
 
 ## Ensure quality
