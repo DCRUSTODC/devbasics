@@ -8,7 +8,7 @@ const progressContainer = document.getElementById("progress-container");
 const title = document.getElementById("title");
 const cover = document.getElementById("cover");
 
-const songs = ["Bas Mein"];
+const songs = ["Circles - Post Malone"];
 let songIndex = 0;
 loadSong(songs[songIndex]);
 function loadSong(song) {
