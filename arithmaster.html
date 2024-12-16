@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>arithmaster</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    nav {
+      background-color: #007bff;
+      width: 100%;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    nav button {
+      background-color: white;
+      color: #007bff;
+      border: 1px solid #007bff;
+      border-radius: 5px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    nav button.active {
+      background-color: #0056b3;
+      color: white;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    td {
+      border: 1px solid #ddd;
+      text-align: center;
+      padding: 5px;
+    }
+    input {
+      width: 50px;
+      text-align: center;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      -moz-appearance: textfield;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+    .correct {
+      background-color: #c8f7c5;
+    }
+    .incorrect {
+      background-color: #f7c5c5;
+    }
+    .header {
+      font-weight: bold;
+      background-color: #f0f0f0;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <button class="tab active" data-digits="2">2-Digit</button>
+    <button class="tab" data-digits="3">3-Digit</button>
+    <button class="tab" data-digits="4">4-Digit</button>
+    <button class="tab" data-digits="5">5-Digit</button>
+    <button class="tab" data-digits="6">6-Digit</button>
+    <button class="tab" data-digits="7">7-Digit</button>
+    <button class="tab" data-digits="8">8-Digit</button>
+  </nav>
+  <table id="additionTable"></table>
+  <button id="resetButton">Reset Game</button>
+
+  <script>
+    let digitCount = 2;
+
+    const generateRandomNumber = () => {
+      const max = Math.pow(10, digitCount) - 1;
+      const min = Math.pow(10, digitCount - 1);
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    };
+
+    const createTable = () => {
+      const table = document.getElementById('additionTable');
+      table.innerHTML = '';
+
+      for (let row = 0; row <= 10; row++) {
+        const tr = document.createElement('tr');
+        for (let col = 0; col <= 10; col++) {
+          const td = document.createElement('td');
+          if (row === 0 && col === 0) {
+            td.classList.add('header');
+          } else if (row === 0 || col === 0) {
+            const randomNumber = generateRandomNumber();
+            td.textContent = randomNumber;
+            td.classList.add('header');
+            td.dataset.value = randomNumber;
+          } else {
+            const input = document.createElement('input');
+            input.type = 'number';
+            input.addEventListener('keydown', (e) => handleInput(e, row, col));
+            td.appendChild(input);
+          }
+          tr.appendChild(td);
+        }
+        table.appendChild(tr);
+      }
+    };
+
+    const handleInput = (event, row, col) => {
+      if (event.key === 'Enter') {
+        if (!event.target.value) return;
+        const table = document.getElementById('additionTable');
+        const input = event.target;
+        const value = parseInt(input.value, 10);
+
+        const rowHeader = parseInt(table.rows[row].cells[0].dataset.value, 10);
+        const colHeader = parseInt(table.rows[0].cells[col].dataset.value, 10);
+        const expectedSum = rowHeader + colHeader;
+
+        if (value === expectedSum) {
+          input.classList.add('correct');
+          input.classList.remove('incorrect');
+        } else {
+          input.classList.add('incorrect');
+          input.classList.remove('correct');
+        }
+
+        const nextInput = findNextInput(row, col);
+        if (nextInput) nextInput.focus();
+      }
+    };
+
+    const findNextInput = (currentRow, currentCol) => {
+      const table = document.getElementById('additionTable');
+      for (let row = currentRow; row < table.rows.length; row++) {
+        for (
+          let col = row === currentRow ? currentCol + 1 : 1;
+          col < table.rows[row].cells.length;
+          col++
+        ) {
+          const input = table.rows[row].cells[col].querySelector('input');
+          if (input) return input;
+        }
+      }
+      return null;
+    };
+
+    const resetGame = () => {
+      createTable();
+    };
+
+    const handleTabClick = (e) => {
+      document.querySelectorAll('.tab').forEach((tab) => tab.classList.remove('active'));
+      e.target.classList.add('active');
+      digitCount = parseInt(e.target.dataset.digits, 10);
+      createTable();
+    };
+
+    document.getElementById('resetButton').addEventListener('click', resetGame);
+    document.querySelectorAll('.tab').forEach((tab) => {
+      tab.addEventListener('click', handleTabClick);
+    });
+
+    createTable();
+  </script>
+</body>
+</html>
